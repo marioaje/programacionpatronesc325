@@ -5,13 +5,14 @@ public class Persona {
     private  String nombre;
     private String apellido;
     private int edad;
+    private Direccion direccion;//Composicion Mi direccion normal donde vivo, ajustes, casa
 
     //Seimpre la llave de incio o el constructor
-    public  Persona (String nombre, String apellido, int edad) {
+    public  Persona (String nombre, String apellido, int edad,  Direccion direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;//Se incluye la edad como atributo segun Task 1
-
+        this.direccion = direccion;
     }
     //Set get
     public String getNombre() {
