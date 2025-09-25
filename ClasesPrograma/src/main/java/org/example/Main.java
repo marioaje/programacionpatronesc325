@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.configuracion.Conexion;
+import org.example.controller.CursoController;
+import org.example.model.Curso;
 
 import java.sql.Connection;
 
@@ -25,6 +27,11 @@ public class Main {
         }else {
             System.err.println("Error al conectar con la base de datos");
         }
+
+
+        CursoController cursoController = new CursoController();
+        Curso curso = new Curso(0, "Programacion de Patrones", "Activo");
+        cursoController.insertarDatos(curso);
     }
 //
 //
