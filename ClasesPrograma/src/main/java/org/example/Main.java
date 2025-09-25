@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.configuracion.Conexion;
+
+import java.sql.Connection;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -14,28 +18,35 @@ public class Main {
 //            System.out.println("i = " + i);
 //        }
 
+        Connection conexion = Conexion.getConnection();
+
+        if (conexion!=null){
+            System.out.println("Conectado con la base de datos");
+        }else {
+            System.err.println("Error al conectar con la base de datos");
+        }
     }
-
-
-    public class Persona{
-        public  String nombre;
-        public String apellido;
-        public int edad;
-
-        public void imprimirDatos(){
-            System.out.println("Nombre: "+nombre);
-            System.out.println("Apellido: "+apellido);
-        }
-
-        public void enviarCorreo(String mensaje){
-            System.out.println(mensaje);
-        }
-
-        public void guardandoBaseDatos(){
-            System.out.println("guardandoBaseDatos ");
-        }
-
-    }
+//
+//
+//    public class Persona{
+//        public  String nombre;
+//        public String apellido;
+//        public int edad;
+//
+//        public void imprimirDatos(){
+//            System.out.println("Nombre: "+nombre);
+//            System.out.println("Apellido: "+apellido);
+//        }
+//
+//        public void enviarCorreo(String mensaje){
+//            System.out.println(mensaje);
+//        }
+//
+//        public void guardandoBaseDatos(){
+//            System.out.println("guardandoBaseDatos ");
+//        }
+//
+//    }
 
 // No se debe hacer
 //    public int operaciones ( String operacion, int a, int b){
