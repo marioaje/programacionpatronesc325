@@ -5,7 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
-//Single +  factory
+//Singleton: Garantiza que una clase tenga solo una instancia y proporciona un punto de
+//acceso global a ella
 //Constantes inmutables
     private static final  String host = "jdbc:mysql://45.88.196.5/u484426513_popc325";
     private static final String user = "u484426513_popc325";

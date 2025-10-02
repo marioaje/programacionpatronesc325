@@ -30,9 +30,15 @@ public class Main {
 
 
         CursoController cursoController = new CursoController();
-        Curso curso = new Curso(0, "Programacion de Patrones", "Activo");
-        cursoController.insertarDatos(curso);
+       // Curso curso = new Curso(0, "Programacion de Patrones", "Activo");
+        cursoController.insertarDatos(0, "Programacion de Patrones Adapter", "Activo");
 
+        System.out.println("---------------------------------------------------");
+
+
+        ///cursoController.obtenerDatosCurso();
+
+        System.out.println( cursoController.obtenerDatosCurso());
 
         System.out.println("Curso Fin");
     }
